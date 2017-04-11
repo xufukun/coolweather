@@ -9,7 +9,7 @@ public class City extends DataSupport {
     private int CityId;
     private String CityName;
     private int CityCode;
-
+    private int ProinceId;
     public int getCityId() {
         return CityId;
     }
@@ -32,5 +32,13 @@ public class City extends DataSupport {
 
     public void setCityCode(int cityCode) {
         CityCode = cityCode;
+    }
+
+    public int getProinceId() {
+        return ProinceId;
+    }
+
+    public void setProinceId(int proinceId) {
+        ProinceId = proinceId;
     }
 }
