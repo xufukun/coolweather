@@ -5,6 +5,19 @@
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
    >
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"/>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <ScrollView
         android:id="@+id/weather_layout"
@@ -16,7 +29,8 @@
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true">
             <include layout="@layout/title"/>
             <include layout="@layout/now"/>
             <include layout="@layout/forecast"/>
@@ -25,5 +39,14 @@
         </LinearLayout>
 
     </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
 
+        <fragment
+            android:id="@+id/choosearea"
+            android:name="com.example.xu.coolweather.ChooseAreaFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"/>
+
+    </android.support.v4.widget.DrawerLayout>
 </FrameLayout>
